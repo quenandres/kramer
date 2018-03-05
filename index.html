@@ -24,31 +24,35 @@
 	    function ver(){
 	        alert("Ver");
 	    }
+	    
+	    function cambia(){
+	        $("ecuacion1").html("5x+3y+2=1");
+	    }
         </script>
     </head>
     <body>
         <h1>Titulo</h1>
-        <table class="table table-bordered" style="width:50%;margin:auto;">
+        <table class="table table-bordered" style="width:60%;margin:auto;">
             <tr>
                 <td colspan="4">Ingrese Valores de la ecuacion</td>
             </tr>
             <tr>
-                <td><span>x</span><input type="text" class="form-control" name="v11"></td>
-                <td><span>y</span><input type="text" class="form-control" name="v12"></td>
-                <td><span>z</span><input type="text" class="form-control" name="v13"></td>
-                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v14"></td>
+                <td><span>x</span><input type="text" class="form-control" name="v11" onkeypress="cambia();"></td>
+                <td><span>y</span><input type="text" class="form-control" name="v12" onkeypress="cambia();"></td>
+                <td><span>z</span><input type="text" class="form-control" name="v13" onkeypress="cambia();"></td>
+                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v14" onkeypress="cambia();"></td>
             </tr>
             <tr>
-                <td><span>x</span><input type="text" class="form-control" name="v21"></td>
-                <td><span>y</span><input type="text" class="form-control" name="v22"></td>
-                <td><span>z</span><input type="text" class="form-control" name="v23"></td>
-                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v24"></td>
+                <td><span>x</span><input type="text" class="form-control" name="v21" onkeypress="cambia();"></td>
+                <td><span>y</span><input type="text" class="form-control" name="v22" onkeypress="cambia();"></td>
+                <td><span>z</span><input type="text" class="form-control" name="v23" onkeypress="cambia();"></td>
+                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v24" onkeypress="cambia();"></td>
             </tr>
             <tr>
-                <td><span>x</span><input type="text" class="form-control" name="v31"></td>
-                <td><span>y</span><input type="text" class="form-control" name="v32"></td>
-                <td><span>z</span><input type="text" class="form-control" name="v33"></td>
-                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v34"></td>
+                <td><span>x</span><input type="text" class="form-control" name="v31" onkeypress="cambia();"></td>
+                <td><span>y</span><input type="text" class="form-control" name="v32" onkeypress="cambia();"></td>
+                <td><span>z</span><input type="text" class="form-control" name="v33" onkeypress="cambia();"></td>
+                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v34" onkeypress="cambia();"></td>
             </tr>
             <tr>
                 <td colspan="4">
@@ -56,6 +60,18 @@
                 </td>
             </tr>
         </table>
+        <div class="row">
+            <div class="col-md-2" id="ecuacion1">D</div>
+            <div class="col-md-2" id="ecuacion2">D1</div>
+            <div class="col-md-2" id="ecuacion3">D2</div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-2" id="delta">D</div>
+            <div class="col-md-2" id="delta1">D1</div>
+            <div class="col-md-2" id="delta2">D2</div>
+            <div class="col-md-2" id="delta3">D3</div>
+        </div>
         
         
     </body>
