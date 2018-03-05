@@ -2,11 +2,61 @@
     <head>
         <title>Kramer</title>
           <link rel="stylesheet" type="text/css" href="bootstrap.css">
-
+          <script src="jquery.js"></script>
+          
+        <style>
+            .form-control{
+                display:block;
+                width:50px;
+                float:left;
+            }
+            span{
+                float:left;
+                vertical-align:middle;
+            }
+        </style>
+        
+        <script>
+         $(function(){
+	        
+	    });
+	    
+	    function ver(){
+	        alert("Ver");
+	    }
+        </script>
     </head>
     <body>
         <h1>Titulo</h1>
-        <input type="button" class="button button-primary" value="Boton">
+        <table class="table table-bordered" style="width:50%;margin:auto;">
+            <tr>
+                <td colspan="4">Ingrese Valores de la ecuacion</td>
+            </tr>
+            <tr>
+                <td><span>x</span><input type="text" class="form-control" name="v11"></td>
+                <td><span>y</span><input type="text" class="form-control" name="v12"></td>
+                <td><span>z</span><input type="text" class="form-control" name="v13"></td>
+                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v14"></td>
+            </tr>
+            <tr>
+                <td><span>x</span><input type="text" class="form-control" name="v21"></td>
+                <td><span>y</span><input type="text" class="form-control" name="v22"></td>
+                <td><span>z</span><input type="text" class="form-control" name="v23"></td>
+                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v24"></td>
+            </tr>
+            <tr>
+                <td><span>x</span><input type="text" class="form-control" name="v31"></td>
+                <td><span>y</span><input type="text" class="form-control" name="v32"></td>
+                <td><span>z</span><input type="text" class="form-control" name="v33"></td>
+                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v34"></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="button" class="btn btn-primary" onclick="ver();" value="Boton">
+                </td>
+            </tr>
+        </table>
+        
         
     </body>
 </html>
