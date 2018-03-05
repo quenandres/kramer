@@ -7,7 +7,7 @@
         <style>
             .form-control{
                 display:block;
-                width:50px;
+                width:60px;
                 float:left;
             }
             span{
@@ -25,38 +25,200 @@
 	        alert("Ver");
 	    }
 	    
-	    function cambia(){
-	        $("ecuacion1").html("5x+3y+2=1");
-	    }
+	    function cambia(){			
+	        var vsigno11=$("#vsigno11").val();
+			var v11=$("#v11").val();
+			
+			var vsigno12=$("#vsigno12").val();
+			var v12=$("#v12").val();
+			
+			var vsigno13=$("#vsigno13").val();
+			var v13=$("#v13").val();
+			
+			var vsigno14=$("#vsigno14").val();
+			var v14=$("#v14").val();
+			
+			if(vsigno11=="+"){vsigno11="";}
+			if(vsigno14=="+"){vsigno14="";}
+			
+			//DETERMINA VACIOS (para no mostrar signos y para asignar variables x,y,z)
+			if(v11!=""){v11=v11+"x";}else{vsigno11="";}			
+			if(v12!=""){v12=v12+"y";}else{vsigno12="";}			
+			if(v13!=""){v13=v13+"z";}else{vsigno13="";}			
+			if(v14!=""){}else{vsigno14="";}		
+			//FIN VACIOS			
+			$("#ecuacion1").html(vsigno11+""+v11+""+vsigno12+""+v12+""+vsigno13+""+v13+"="+vsigno14+""+v14);
+	    
+		
+		//SEGUNDA ECUACION
+		
+			var vsigno21=$("#vsigno21").val();
+			var v21=$("#v21").val();
+			
+			var vsigno22=$("#vsigno22").val();
+			var v22=$("#v22").val();
+			
+			var vsigno23=$("#vsigno23").val();
+			var v23=$("#v23").val();
+			
+			var vsigno24=$("#vsigno24").val();
+			var v24=$("#v24").val();
+			
+			if(vsigno21=="+"){vsigno21="";}
+			if(vsigno24=="+"){vsigno24="";}
+			
+			//DETERMINA VACIOS (para no mostrar signos y para asignar variables x,y,z)
+			if(v21!=""){v21=v21+"x";}else{vsigno21="";}			
+			if(v22!=""){v22=v22+"y";}else{vsigno22="";}			
+			if(v23!=""){v23=v23+"z";}else{vsigno23="";}			
+			if(v24!=""){}else{vsigno24="";}		
+			//FIN VACIOS			
+			$("#ecuacion2").html(vsigno21+""+v21+""+vsigno22+""+v22+""+vsigno23+""+v23+"="+vsigno24+""+v24);
+			
+			
+		//TERCERA ECUACION
+			var vsigno31=$("#vsigno31").val();
+			var v31=$("#v31").val();
+			
+			var vsigno32=$("#vsigno32").val();
+			var v32=$("#v32").val();
+			
+			var vsigno33=$("#vsigno33").val();
+			var v33=$("#v33").val();
+			
+			var vsigno34=$("#vsigno34").val();
+			var v34=$("#v34").val();
+			
+			if(vsigno31=="+"){vsigno31="";}
+			if(vsigno34=="+"){vsigno34="";}
+			
+			//DETERMINA VACIOS (para no mostrar signos y para asignar variables x,y,z)
+			if(v31!=""){v31=v31+"x";}else{vsigno31="";}			
+			if(v32!=""){v32=v32+"y";}else{vsigno32="";}			
+			if(v33!=""){v33=v33+"z";}else{vsigno33="";}			
+			if(v34!=""){}else{vsigno34="";}		
+			//FIN VACIOS			
+			$("#ecuacion3").html(vsigno31+""+v31+""+vsigno32+""+v32+""+vsigno33+""+v33+"="+vsigno34+""+v34);
+		
+		
+		
+		}
         </script>
     </head>
     <body>
-        <h1>Titulo</h1>
-        <table class="table table-bordered" style="width:60%;margin:auto;">
+        <h1 style="text-align:center;">KRAMER</h1>
+        <table class="table table-bordered" style="width:70%;margin:auto;">
             <tr>
-                <td colspan="4">Ingrese Valores de la ecuacion</td>
+                <td colspan="7">Ingrese Valores de la ecuacion</td>
             </tr>
             <tr>
-                <td><span>x</span><input type="text" class="form-control" name="v11" onkeypress="cambia();"></td>
-                <td><span>y</span><input type="text" class="form-control" name="v12" onkeypress="cambia();"></td>
-                <td><span>z</span><input type="text" class="form-control" name="v13" onkeypress="cambia();"></td>
-                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v14" onkeypress="cambia();"></td>
+                <td>
+					<select class="form-control"  onchange="cambia();"name="vsigno11" id="vsigno11">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+				<td><span>x</span><input type="text" class="form-control" name="v11" id="v11" onkeyup="cambia();"></td>
+				<td>
+					<select class="form-control"  onchange="cambia();"name="vsigno12" id="vsigno12">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+                <td><span>y</span><input type="text" class="form-control" name="v12" id="v12" onkeyup="cambia();"></td>
+				<td>
+					<select class="form-control"  onchange="cambia();"name="vsigno13" id="vsigno13">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+                <td><span>z</span><input type="text" class="form-control" name="v13" id="v13" onkeyup="cambia();"></td>				
+                <td>
+					<span>=</span>
+					<select class="form-control"  onchange="cambia();"name="vsigno14" id="vsigno14">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+					<input type="text" class="form-control" name="v14" id="v14" onkeyup="cambia();"></td>
             </tr>
-            <tr>
-                <td><span>x</span><input type="text" class="form-control" name="v21" onkeypress="cambia();"></td>
-                <td><span>y</span><input type="text" class="form-control" name="v22" onkeypress="cambia();"></td>
-                <td><span>z</span><input type="text" class="form-control" name="v23" onkeypress="cambia();"></td>
-                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v24" onkeypress="cambia();"></td>
+			
+			
+			
+			 <tr>
+                <td>
+					<select class="form-control"  onchange="cambia();"name="vsigno21" id="vsigno21">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+				<td><span>x</span><input type="text" class="form-control" name="v21" id="v21" onkeyup="cambia();"></td>
+				<td>
+					<select class="form-control"  onchange="cambia();"name="vsigno22" id="vsigno22">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+                <td><span>y</span><input type="text" class="form-control" name="v22" id="v22" onkeyup="cambia();"></td>
+				<td>
+					<select class="form-control"  onchange="cambia();"name="vsigno23" id="vsigno23">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+                <td><span>z</span><input type="text" class="form-control" name="v23" id="v23" onkeyup="cambia();"></td>
+				
+                <td>
+					<span>=</span>
+					<select class="form-control"  onchange="cambia();"name="vsigno24" id="vsigno24">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+					<input type="text" class="form-control" name="v24" id="v24" onkeyup="cambia();"></td>
             </tr>
-            <tr>
-                <td><span>x</span><input type="text" class="form-control" name="v31" onkeypress="cambia();"></td>
-                <td><span>y</span><input type="text" class="form-control" name="v32" onkeypress="cambia();"></td>
-                <td><span>z</span><input type="text" class="form-control" name="v33" onkeypress="cambia();"></td>
-                <td style="border-left:1px solid black;"><span>=</span><input type="text" class="form-control" name="v34" onkeypress="cambia();"></td>
+			
+			
+			
+			
+			
+			
+			 <tr>
+                <td>
+					<select class="form-control"  onchange="cambia();"name="vsigno31" id="vsigno31">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+				<td><span>x</span><input type="text" class="form-control" name="v31" id="v31" onkeyup="cambia();"></td>
+				<td>
+					<select class="form-control"  onchange="cambia();"name="vsigno32" id="vsigno32">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+                <td><span>y</span><input type="text" class="form-control" name="v32" id="v32" onkeyup="cambia();"></td>
+				<td>
+					<select class="form-control"  onchange="cambia();"name="vsigno33" id="vsigno33">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+                <td><span>z</span><input type="text" class="form-control" name="v33" id="v33" onkeyup="cambia();"></td>
+				<td>
+					<span>=</span>
+					<select class="form-control"  onchange="cambia();"name="vsigno34" id="vsigno34">
+						<option value="+">+</option>
+						<option value="-">-</option>
+					</select>
+					<input type="text" class="form-control" name="v34" id="v34" onkeyup="cambia();"></td>
             </tr>
+			
+			
+			
+			
+          
             <tr>
-                <td colspan="4">
-                    <input type="button" class="btn btn-primary" onclick="ver();" value="Boton">
+                <td colspan="7">
+                    <input type="button" class="btn btn-primary" onclick="ver();" value="Resolver" style="display:block;margin:auto;">
                 </td>
             </tr>
         </table>
