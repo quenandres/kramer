@@ -25,8 +25,11 @@
 	        alert("Ver");
 	    }
 	    
-	    function cambia(){			
-	        var vsigno11=$("#vsigno11").val();
+	    function cambia(ver=0){			
+	    	
+			//PRIMERA ECUACION
+		
+			var vsigno11=$("#vsigno11").val();
 			var v11=$("#v11").val();
 			
 			var vsigno12=$("#vsigno12").val();
@@ -46,9 +49,9 @@
 			if(v12!=""){v12=v12+"y";}else{vsigno12="";}			
 			if(v13!=""){v13=v13+"z";}else{vsigno13="";}			
 			if(v14!=""){}else{vsigno14="";}		
-			//FIN VACIOS			
-			$("#ecuacion1").html(vsigno11+""+v11+""+vsigno12+""+v12+""+vsigno13+""+v13+"="+vsigno14+""+v14);
-	    
+			//FIN VACIOS		
+			
+			$("#ecuacion1").html(vsigno11+""+v11+""+vsigno12+""+v12+""+vsigno13+""+v13+"="+vsigno14+""+v14);   
 		
 		//SEGUNDA ECUACION
 		
@@ -72,9 +75,9 @@
 			if(v22!=""){v22=v22+"y";}else{vsigno22="";}			
 			if(v23!=""){v23=v23+"z";}else{vsigno23="";}			
 			if(v24!=""){}else{vsigno24="";}		
-			//FIN VACIOS			
-			$("#ecuacion2").html(vsigno21+""+v21+""+vsigno22+""+v22+""+vsigno23+""+v23+"="+vsigno24+""+v24);
+			//FIN VACIOS		
 			
+			$("#ecuacion2").html(vsigno21+""+v21+""+vsigno22+""+v22+""+vsigno23+""+v23+"="+vsigno24+""+v24);		
 			
 		//TERCERA ECUACION
 			var vsigno31=$("#vsigno31").val();
@@ -97,13 +100,224 @@
 			if(v32!=""){v32=v32+"y";}else{vsigno32="";}			
 			if(v33!=""){v33=v33+"z";}else{vsigno33="";}			
 			if(v34!=""){}else{vsigno34="";}		
-			//FIN VACIOS			
+			//FIN VACIOS				
 			$("#ecuacion3").html(vsigno31+""+v31+""+vsigno32+""+v32+""+vsigno33+""+v33+"="+vsigno34+""+v34);
+				
 		
-		
-		
+				if(ver==1){					
+					var Matriz = [[vsigno11,v11,vsigno12,v12,vsigno13,v13,"=",vsigno14,v14],
+												[vsigno21,v21,vsigno22,v22,vsigno23,v23,"=",vsigno24,v24],
+												[vsigno31,v31,vsigno32,v32,vsigno33,v33,"=",vsigno34,v34]];		
+					ver_tabla(Matriz);
+					ecuaciones();
+				}
+			//
 		}
-        </script>
+		
+		function ecuaciones(){			
+			//PRIMERA ECUACION
+		
+			var vsigno11=$("#vsigno11").val();
+			var v11=$("#v11").val();
+			
+			var vsigno12=$("#vsigno12").val();
+			var v12=$("#v12").val();
+			
+			var vsigno13=$("#vsigno13").val();
+			var v13=$("#v13").val();
+			
+			var vsigno14=$("#vsigno14").val();
+			var v14=$("#v14").val();
+			
+			/*if(vsigno11=="+"){vsigno11="";}
+			if(vsigno14=="+"){vsigno14="";}*/
+			
+			//DETERMINA VACIOS (para no mostrar signos y para asignar variables x,y,z)
+			/*if(v11!=""){v11=v11;}else{vsigno11="";}			
+			if(v12!=""){v12=v12;}else{vsigno12="";}			
+			if(v13!=""){v13=v13;}else{vsigno13="";}			
+			if(v14!=""){}else{vsigno14="";}	*/	
+			//FIN VACIOS		
+			
+		//SEGUNDA ECUACION		
+			var vsigno21=$("#vsigno21").val();
+			var v21=$("#v21").val();
+			
+			var vsigno22=$("#vsigno22").val();
+			var v22=$("#v22").val();
+			
+			var vsigno23=$("#vsigno23").val();
+			var v23=$("#v23").val();
+			
+			var vsigno24=$("#vsigno24").val();
+			var v24=$("#v24").val();
+			
+			/*if(vsigno21=="+"){vsigno21="";}
+			if(vsigno24=="+"){vsigno24="";}*/
+			
+			//DETERMINA VACIOS (para no mostrar signos y para asignar variables x,y,z)
+			/*if(v21!=""){v21=v21;}else{vsigno21="";}			
+			if(v22!=""){v22=v22;}else{vsigno22="";}			
+			if(v23!=""){v23=v23;}else{vsigno23="";}			
+			if(v24!=""){}else{vsigno24="";}		*/
+			//FIN VACIOS	
+			
+		//TERCERA ECUACION
+			var vsigno31=$("#vsigno31").val();
+			var v31=$("#v31").val();
+			
+			var vsigno32=$("#vsigno32").val();
+			var v32=$("#v32").val();
+			
+			var vsigno33=$("#vsigno33").val();
+			var v33=$("#v33").val();
+			
+			var vsigno34=$("#vsigno34").val();
+			var v34=$("#v34").val();
+			
+			/*if(vsigno31=="+"){vsigno31="";}
+			if(vsigno34=="+"){vsigno34="";}*/
+			
+			//DETERMINA VACIOS (para no mostrar signos y para asignar variables x,y,z)
+			/*if(v31!=""){v31=v31;}else{vsigno31="";}			
+			if(v32!=""){v32=v32;}else{vsigno32="";}			
+			if(v33!=""){v33=v33;}else{vsigno33="";}			
+			if(v34!=""){}else{vsigno34="";}		*/
+			//FIN VACIOS				
+				
+		
+						
+					var Matriz2 = [[vsigno11,v11,vsigno12,v12,vsigno13,v13,"=",vsigno14,v14],
+												[vsigno21,v21,vsigno22,v22,vsigno23,v23,"=",vsigno24,v24],
+												[vsigno31,v31,vsigno32,v32,vsigno33,v33,"=",vsigno34,v34]];		
+					delta(Matriz2);
+				
+			//
+		}
+		
+					
+		function ver_tabla(Matriz){						
+		//matriz original
+			$("#respuesta").html("");
+			
+			//$("#respuesta").append("<table width=200 border=1 cellpadding=1 cellspacing=1 class='table table-striped'>"); 
+			
+			for (i=0;i<Matriz.length;i++){ 
+				var suma=parseInt(i)+1;
+						$("#respuesta").append("<tr>") ;
+						$("#respuesta").append("<td><b>Ecuacion " + suma + "</b></td>") ;
+						for (j=0;j<9;j++){ 
+								$("#respuesta").append("<td>" + Matriz[i][j] + "</td>") ;
+						} 
+						$("#respuesta").append("</tr>");
+				} 
+		}		
+		function delta(Matriz){
+		/*
+			1|2|3=6 
+			3|2|1=6
+			4|5|8=17
+		
+			0,0|0,1|0,2
+			1,0|1,1|1,2
+			2,0|2,1|2,2
+			
+			0,0|0,1|0,2
+			1,0|1,1|1,2
+			2,0|2,1|2,2
+			0,0|0,1|0,2
+			1,0|1,1|1,2
+		*/	
+			//fila,columna
+			var s00=Matriz[0][0];
+			var s10=Matriz[1][0];
+			var s20=Matriz[2][0];
+			
+			var s02=Matriz[0][2];
+			var s12=Matriz[1][2];
+			var s22=Matriz[2][2];
+			
+			var s04=Matriz[0][4];
+			var s14=Matriz[1][4];
+			var s24=Matriz[2][4];
+			
+			var s07=Matriz[0][7];
+			var s17=Matriz[1][7];
+			var s27=Matriz[2][7];
+			
+			console.log("Signos0="+s00+"|"+s10+"|"+s20);
+			console.log("Signos1="+s02+"|"+s12+"|"+s22);
+			console.log("Signos2="+s04+"|"+s14+"|"+s24);
+			console.log("Signos3="+s07+"|"+s17+"|"+s27);
+			
+			/*console.log(
+				"|"+Matriz[0][1]+"|"+Matriz[0][2]+"$"+Matriz[1][0]+"|"+Matriz[1][1]+"|"+Matriz[1][2]+"$"+Matriz[2][0]+"|"+Matriz[2][1]+"|"+Matriz[2][2]
+								 
+								 );*/
+			
+			
+			
+			
+			
+		}
+		function delta1(){
+		//matriz con respuestas en columna 1	
+			/*
+			6|2|3 
+			6|2|1
+			17|5|8
+			
+			0,3|0,1|0,2
+			1,3|1,1|1,2
+			2,3|2,1|2,2
+			0,3|0,1|0,2
+			1,3|1,1|1,2
+			*/
+			
+			
+			
+			
+			
+		}
+		function delta2(){
+		//matriz con respuestas en columna 2	
+			/*
+			1|6|3 
+			3|6|1
+			4|17|8
+			
+			0,0|0,3|0,2
+			1,0|1,3|1,2
+			2,0|2,3|2,2	
+			0,0|0,3|0,2
+			1,0|1,3|1,2
+			*/
+			
+			
+			
+			
+		}
+		function delta3(){
+		//matriz con respuestas en columna 3
+			/*
+			1|2|6=6 
+			3|2|6=6
+			4|5|8=17
+			
+			0,0|0,1|0,3
+			1,0|1,1|1,3
+			2,0|2,1|2,3
+			0,0|0,1|0,3
+			1,0|1,1|1,3
+			*/
+			
+			
+			
+			
+			
+		}
+  </script>
+			
     </head>
     <body>
         <h1 style="text-align:center;">KRAMER</h1>
@@ -211,30 +425,30 @@
 					</select>
 					<input type="text" class="form-control" name="v34" id="v34" onkeyup="cambia();"></td>
             </tr>
-			
-			
-			
-			
-          
             <tr>
                 <td colspan="7">
-                    <input type="button" class="btn btn-primary" onclick="ver();" value="Resolver" style="display:block;margin:auto;">
+                    <input type="button" class="btn btn-primary" onclick="cambia(1);" value="Resolver" style="display:block;margin:auto;">
                 </td>
             </tr>
         </table>
+			
+			
+			
+				
         <div class="row">
-            <div class="col-md-2" id="ecuacion1">D</div>
-            <div class="col-md-2" id="ecuacion2">D1</div>
-            <div class="col-md-2" id="ecuacion3">D2</div>
+            <div class="col-md-4" id="ecuacion1">D</div>
+            <div class="col-md-4" id="ecuacion2">D1</div>
+            <div class="col-md-4" id="ecuacion3">D2</div>
         </div>
-        
-        <div class="row">
+			
+			<table id="respuesta" class="table table-striped" style="width:50%;margin:auto;"></table>
+			
+         <div class="row">
             <div class="col-md-2" id="delta">D</div>
             <div class="col-md-2" id="delta1">D1</div>
             <div class="col-md-2" id="delta2">D2</div>
             <div class="col-md-2" id="delta3">D3</div>
         </div>
-        
         
     </body>
 </html>
