@@ -29,85 +29,88 @@
 	    	
 			//PRIMERA ECUACION
 		
-			var vsigno11=$("#vsigno11").val();
+			//var vsigno11=$("#vsigno11").val();
 			var v11=$("#v11").val();
 			
-			var vsigno12=$("#vsigno12").val();
+			//var vsigno12=$("#vsigno12").val();
 			var v12=$("#v12").val();
 			
-			var vsigno13=$("#vsigno13").val();
+			//var vsigno13=$("#vsigno13").val();
 			var v13=$("#v13").val();
 			
-			var vsigno14=$("#vsigno14").val();
+			//var vsigno14=$("#vsigno14").val();
 			var v14=$("#v14").val();
 			
-			if(vsigno11=="+"){vsigno11="";}
-			if(vsigno14=="+"){vsigno14="";}
+			/*if(vsigno11=="+"){vsigno11="";}
+			if(vsigno14=="+"){vsigno14="";}*/
 			
 			//DETERMINA VACIOS (para no mostrar signos y para asignar variables x,y,z)
-			if(v11!=""){v11=v11+"x";}else{vsigno11="";}			
-			if(v12!=""){v12=v12+"y";}else{vsigno12="";}			
-			if(v13!=""){v13=v13+"z";}else{vsigno13="";}			
-			if(v14!=""){}else{vsigno14="";}		
+			if(v11!=""){v11=v11+"x";}else{}			
+			if(v12!=""){v12=v12+"y";}else{}			
+			if(v13!=""){v13=v13+"z";}else{}			
+			if(v14!=""){}else{}		
 			//FIN VACIOS		
 			
-			$("#ecuacion1").html(vsigno11+""+v11+""+vsigno12+""+v12+""+vsigno13+""+v13+"="+vsigno14+""+v14);   
+			//$("#ecuacion1").html(vsigno11+""+v11+""+vsigno12+""+v12+""+vsigno13+""+v13+"="+vsigno14+""+v14);   
+			$("#ecuacion1").html(""+v11+""+v12+""+v13+"="+v14);   
 		
 		//SEGUNDA ECUACION
 		
-			var vsigno21=$("#vsigno21").val();
+			//var vsigno21=$("#vsigno21").val();
 			var v21=$("#v21").val();
 			
-			var vsigno22=$("#vsigno22").val();
+			//var vsigno22=$("#vsigno22").val();
 			var v22=$("#v22").val();
 			
-			var vsigno23=$("#vsigno23").val();
+			//var vsigno23=$("#vsigno23").val();
 			var v23=$("#v23").val();
 			
-			var vsigno24=$("#vsigno24").val();
+			//var vsigno24=$("#vsigno24").val();
 			var v24=$("#v24").val();
 			
-			if(vsigno21=="+"){vsigno21="";}
-			if(vsigno24=="+"){vsigno24="";}
+			//if(vsigno21=="+"){vsigno21="";}
+			//if(vsigno24=="+"){vsigno24="";}
 			
 			//DETERMINA VACIOS (para no mostrar signos y para asignar variables x,y,z)
-			if(v21!=""){v21=v21+"x";}else{vsigno21="";}			
-			if(v22!=""){v22=v22+"y";}else{vsigno22="";}			
-			if(v23!=""){v23=v23+"z";}else{vsigno23="";}			
-			if(v24!=""){}else{vsigno24="";}		
+			if(v21!=""){v21=v21+"x";}else{}			
+			if(v22!=""){v22=v22+"y";}else{}			
+			if(v23!=""){v23=v23+"z";}else{}			
+			if(v24!=""){}else{}		
 			//FIN VACIOS		
 			
-			$("#ecuacion2").html(vsigno21+""+v21+""+vsigno22+""+v22+""+vsigno23+""+v23+"="+vsigno24+""+v24);		
+			//$("#ecuacion2").html(vsigno21+""+v21+""+vsigno22+""+v22+""+vsigno23+""+v23+"="+vsigno24+""+v24);		
+			$("#ecuacion2").html(""+v21+""+v22+""+v23+"="+v24);
 			
 		//TERCERA ECUACION
-			var vsigno31=$("#vsigno31").val();
+			//var vsigno31=$("#vsigno31").val();
 			var v31=$("#v31").val();
 			
-			var vsigno32=$("#vsigno32").val();
+			//var vsigno32=$("#vsigno32").val();
 			var v32=$("#v32").val();
 			
-			var vsigno33=$("#vsigno33").val();
+			//var vsigno33=$("#vsigno33").val();
 			var v33=$("#v33").val();
 			
-			var vsigno34=$("#vsigno34").val();
+			//var vsigno34=$("#vsigno34").val();
 			var v34=$("#v34").val();
 			
-			if(vsigno31=="+"){vsigno31="";}
-			if(vsigno34=="+"){vsigno34="";}
+			//if(vsigno31=="+"){vsigno31="";}
+			//if(vsigno34=="+"){vsigno34="";}
 			
 			//DETERMINA VACIOS (para no mostrar signos y para asignar variables x,y,z)
-			if(v31!=""){v31=v31+"x";}else{vsigno31="";}			
-			if(v32!=""){v32=v32+"y";}else{vsigno32="";}			
-			if(v33!=""){v33=v33+"z";}else{vsigno33="";}			
-			if(v34!=""){}else{vsigno34="";}		
+			if(v31!=""){v31=v31+"x";}else{}			
+			if(v32!=""){v32=v32+"y";}else{}			
+			if(v33!=""){v33=v33+"z";}else{}			
+			if(v34!=""){}else{}		
 			//FIN VACIOS				
-			$("#ecuacion3").html(vsigno31+""+v31+""+vsigno32+""+v32+""+vsigno33+""+v33+"="+vsigno34+""+v34);
+			//$("#ecuacion3").html(vsigno31+""+v31+""+vsigno32+""+v32+""+vsigno33+""+v33+"="+vsigno34+""+v34);
+			$("#ecuacion3").html(""+v31+""+v32+""+v33+"="+v34);
 				
 		
 				if(ver==1){					
-					var Matriz = [[vsigno11,v11,vsigno12,v12,vsigno13,v13,"=",vsigno14,v14],
-												[vsigno21,v21,vsigno22,v22,vsigno23,v23,"=",vsigno24,v24],
-												[vsigno31,v31,vsigno32,v32,vsigno33,v33,"=",vsigno34,v34]];		
+					var Matriz = [[v11,v12,v13,"=",v14],
+												[v21,v22,v23,"=",v24],
+												[v31,v32,v33,"=",v34]];		
 					ver_tabla(Matriz);
 					ecuaciones();
 				}
@@ -117,16 +120,16 @@
 		function ecuaciones(){			
 			//PRIMERA ECUACION
 		
-			var vsigno11=$("#vsigno11").val();
+			//var vsigno11=$("#vsigno11").val();
 			var v11=$("#v11").val();
 			
-			var vsigno12=$("#vsigno12").val();
+			//var vsigno12=$("#vsigno12").val();
 			var v12=$("#v12").val();
 			
-			var vsigno13=$("#vsigno13").val();
+			//var vsigno13=$("#vsigno13").val();
 			var v13=$("#v13").val();
 			
-			var vsigno14=$("#vsigno14").val();
+			//var vsigno14=$("#vsigno14").val();
 			var v14=$("#v14").val();
 			
 			/*if(vsigno11=="+"){vsigno11="";}
@@ -140,16 +143,16 @@
 			//FIN VACIOS		
 			
 		//SEGUNDA ECUACION		
-			var vsigno21=$("#vsigno21").val();
+			//var vsigno21=$("#vsigno21").val();
 			var v21=$("#v21").val();
 			
-			var vsigno22=$("#vsigno22").val();
+			//var vsigno22=$("#vsigno22").val();
 			var v22=$("#v22").val();
 			
-			var vsigno23=$("#vsigno23").val();
+			//var vsigno23=$("#vsigno23").val();
 			var v23=$("#v23").val();
 			
-			var vsigno24=$("#vsigno24").val();
+			//var vsigno24=$("#vsigno24").val();
 			var v24=$("#v24").val();
 			
 			/*if(vsigno21=="+"){vsigno21="";}
@@ -163,16 +166,16 @@
 			//FIN VACIOS	
 			
 		//TERCERA ECUACION
-			var vsigno31=$("#vsigno31").val();
+			//var vsigno31=$("#vsigno31").val();
 			var v31=$("#v31").val();
 			
-			var vsigno32=$("#vsigno32").val();
+			//var vsigno32=$("#vsigno32").val();
 			var v32=$("#v32").val();
 			
-			var vsigno33=$("#vsigno33").val();
+			//var vsigno33=$("#vsigno33").val();
 			var v33=$("#v33").val();
 			
-			var vsigno34=$("#vsigno34").val();
+			//var vsigno34=$("#vsigno34").val();
 			var v34=$("#v34").val();
 			
 			/*if(vsigno31=="+"){vsigno31="";}
@@ -187,12 +190,37 @@
 				
 		
 						
-					var Matriz2 = [[vsigno11,v11,vsigno12,v12,vsigno13,v13,"=",vsigno14,v14],
-												[vsigno21,v21,vsigno22,v22,vsigno23,v23,"=",vsigno24,v24],
-												[vsigno31,v31,vsigno32,v32,vsigno33,v33,"=",vsigno34,v34]];		
+					var Matriz2 = [[v11,v12,v13,v14],
+												[v21,v22,v23,v24],
+												[v31,v32,v33,v34]];		
 					delta(Matriz2);
-				
+					delta1(Matriz2);
+					delta2(Matriz2);
+					delta3(Matriz2);
+					resultado();
 			//
+		}
+					
+		function resultado(){
+			var resultadoD=$("#resultadoD").val();
+			var resultadoD1=$("#resultadoD1").val();
+			var resultadoD2=$("#resultadoD2").val();
+			var resultadoD3=$("#resultadoD3").val();
+			
+			var x=parseInt(resultadoD1)/parseInt(resultadoD);
+			var y=parseInt(resultadoD2)/parseInt(resultadoD);
+			var z=parseInt(resultadoD3)/parseInt(resultadoD);
+				
+			$("#Delta").html("<h2>Delta = "+resultadoD+"</h2>");
+			$("#Deltax").html("<h2>x = "+x+"</h2>");
+			$("#Deltay").html("<h2>y = "+y+"</h2>");
+			$("#Deltaz").html("<h2>z = "+z+"</h2>");
+			/*	
+					<div class="col-md-4" id="Delta">D</div>
+          <div class="col-md-4" id="Deltax">D1</div>
+          <div class="col-md-4" id="Deltay">D2</div>
+					<div class="col-md-4" id="Deltaz">D3</div>
+						*/
 		}
 		
 					
@@ -206,7 +234,7 @@
 				var suma=parseInt(i)+1;
 						$("#respuesta").append("<tr>") ;
 						$("#respuesta").append("<td><b>Ecuacion " + suma + "</b></td>") ;
-						for (j=0;j<9;j++){ 
+						for (j=0;j<5;j++){ 
 								$("#respuesta").append("<td>" + Matriz[i][j] + "</td>") ;
 						} 
 						$("#respuesta").append("</tr>");
@@ -228,39 +256,90 @@
 			0,0|0,1|0,2
 			1,0|1,1|1,2
 		*/	
-			//fila,columna
-			var s00=Matriz[0][0];
-			var s10=Matriz[1][0];
-			var s20=Matriz[2][0];
+			//fila,columna			
+			//DATOS
+			//Ecuacion1
+			var x00=Matriz[0][0];
+			var x10=Matriz[1][0];
+			var x20=Matriz[2][0];
 			
-			var s02=Matriz[0][2];
-			var s12=Matriz[1][2];
-			var s22=Matriz[2][2];
+			var y01=Matriz[0][1];
+			var y11=Matriz[1][1];
+			var y21=Matriz[2][1];
 			
-			var s04=Matriz[0][4];
-			var s14=Matriz[1][4];
-			var s24=Matriz[2][4];
+			var z02=Matriz[0][2];
+			var z12=Matriz[1][2];
+			var z22=Matriz[2][2];
 			
-			var s07=Matriz[0][7];
-			var s17=Matriz[1][7];
-			var s27=Matriz[2][7];
+			var r03=Matriz[0][3];
+			var r13=Matriz[1][3];
+			var r23=Matriz[2][3];
+			//Fin Ecuacion1
+			//DATOS
+			//console.log(x00+"|"+y11+"|"+z22);
+			/*
+			x00|y01|z02
+			x10|y11|z12
+			x20|y21|z22
+			x00|y01|z02
+			x10|y11|z12
+			*/	
+			$("#delta").html("");
 			
-			console.log("Signos0="+s00+"|"+s10+"|"+s20);
-			console.log("Signos1="+s02+"|"+s12+"|"+s22);
-			console.log("Signos2="+s04+"|"+s14+"|"+s24);
-			console.log("Signos3="+s07+"|"+s17+"|"+s27);
+			$("#delta").append("<tr><th>D</th></tr>");
+			$("#delta").append("<tr><th>Primeras diagonales</th></tr>");
 			
-			/*console.log(
-				"|"+Matriz[0][1]+"|"+Matriz[0][2]+"$"+Matriz[1][0]+"|"+Matriz[1][1]+"|"+Matriz[1][2]+"$"+Matriz[2][0]+"|"+Matriz[2][1]+"|"+Matriz[2][2]
-								 
-								 );*/
+			$("#delta").append("<tr>");
+			//x00*y11*z22
+			
+			var diagonal1=operacion(x00,y11,z22);	
+			$("#delta").append("<td>"+x00+"|"+y11+"|"+z22+"|="+diagonal1+"</td>");
+			$("#delta").append("</tr>");
+			$("#delta").append("<tr>");
+			//x00*y11*z02
+			
+			var diagonal2=operacion(x10,y21,z02);
+			$("#delta").append("<td>"+x10+"|"+y21+"|"+z02+"|="+diagonal2+"</td>");
+			$("#delta").append("</tr>");
+			$("#delta").append("<tr>");
+			//x00*y11*z02
+			
+			var diagonal3=operacion(x20,y01,z12);
+			$("#delta").append("<td>"+x20+"|"+y01+"|"+z12+"|="+diagonal3+"</td>");
+			$("#delta").append("</tr>");
+			
+			$("#delta").append("<tr><th>Segundas diagonales</th></tr>");
+			
+			//z02*y11*x20
+			$("#delta").append("<tr>");
+			
+			var diagonal4=operacion(z02,y11,x20);	
+			$("#delta").append("<td>"+z02+"|"+y11+"|"+x20+"|="+diagonal4+"</td>");
+			//z12*y21*x00
+			$("#delta").append("</tr>");
+			$("#delta").append("<tr>");			
+			var diagonal5=operacion(z12,y21,x00);	
+			$("#delta").append("<td>"+z12+"|"+y21+"|"+x00+"|="+diagonal5+"</td>");
+			//z22*y01*x10
+			$("#delta").append("</tr>");
+			$("#delta").append("<tr>");			
+			var diagonal6=operacion(z22,y01,x10);	
+			$("#delta").append("<td>"+z22+"|"+y01+"|"+x10+"|="+diagonal6+"</td>");
+			$("#delta").append("</tr>");
 			
 			
-			
-			
-			
+			var Respuesta=(parseInt(diagonal1)+parseInt(diagonal2)+parseInt(diagonal3))-(parseInt(diagonal4)+parseInt(diagonal5)+parseInt(diagonal6));
+			//console.log(diagonal1+"+"+diagonal2+"+"+diagonal3+"+"+diagonal4+"+"+diagonal5+"+"+diagonal6);
+			$("#delta").append("<tr><th>Total="+Respuesta+"</th></tr>");
+			$("#resultadoD").val(Respuesta);
+			//console.log(Respuesta);
+			//funcion de operacion-> numero1,numero2,signo operacion(2,5,s00)
 		}
-		function delta1(){
+					
+					
+					
+					
+		function delta1(Matriz){
 		//matriz con respuestas en columna 1	
 			/*
 			6|2|3 
@@ -273,13 +352,87 @@
 			0,3|0,1|0,2
 			1,3|1,1|1,2
 			*/
+		//fila,columna			
+			//DATOS
+			//Ecuacion1
+			var x00=Matriz[0][0];
+			var x10=Matriz[1][0];
+			var x20=Matriz[2][0];
+			
+			var y01=Matriz[0][1];
+			var y11=Matriz[1][1];
+			var y21=Matriz[2][1];
+			
+			var z02=Matriz[0][2];
+			var z12=Matriz[1][2];
+			var z22=Matriz[2][2];
+			
+			var r03=Matriz[0][3];
+			var r13=Matriz[1][3];
+			var r23=Matriz[2][3];
+			//Fin Ecuacion1
+			//DATOS
+			/*
+			r03|y01|z02
+			r13|y11|z12
+			r23|y21|z22
+			r03|y01|z02
+			r13|y11|z12
+			*/	
+			$("#delta1").html("");			
+			$("#delta1").append("<tr><th>D1</th></tr>");
+			$("#delta1").append("<tr><th>Primeras diagonales</th></tr>");			
+			$("#delta1").append("<tr>");
+			//x00*y11*z22			
+			var diagonal1=operacion(r03,y11,z22);	
+			$("#delta1").append("<td>"+r03+"|"+y11+"|"+z22+"|="+diagonal1+"</td>");
+			$("#delta1").append("</tr>");
+			$("#delta1").append("<tr>");
+			//x00*y11*z02
+			
+			var diagonal2=operacion(r13,y21,z02);
+			$("#delta1").append("<td>"+r13+"|"+y21+"|"+z02+"|="+diagonal2+"</td>");
+			$("#delta1").append("</tr>");
+			$("#delta1").append("<tr>");
+			//x00*y11*z02
+			
+			var diagonal3=operacion(r23,y01,z12);
+			$("#delta1").append("<td>"+r23+"|"+y01+"|"+z12+"|="+diagonal3+"</td>");
+			$("#delta1").append("</tr>");
+			
+			$("#delta1").append("<tr><th>Segundas diagonales</th></tr>");
+			
+			//z02*y11*x20
+			$("#delta1").append("<tr>");
+			
+			var diagonal4=operacion(z02,y11,r23);	
+			$("#delta1").append("<td>"+z02+"|"+y11+"|"+r23+"|="+diagonal4+"</td>");
+			//z12*y21*x00
+			$("#delta1").append("</tr>");
+			$("#delta1").append("<tr>");			
+			var diagonal5=operacion(z12,y21,r03);	
+			$("#delta1").append("<td>"+z12+"|"+y21+"|"+r03+"|="+diagonal5+"</td>");
+			//z22*y01*x10
+			$("#delta1").append("</tr>");
+			$("#delta1").append("<tr>");			
+			var diagonal6=operacion(z22,y01,r13);	
+			$("#delta1").append("<td>"+z22+"|"+y01+"|"+r13+"|="+diagonal6+"</td>");
+			$("#delta1").append("</tr>");
 			
 			
+			
+			var Respuesta=(parseInt(diagonal1)+parseInt(diagonal2)+parseInt(diagonal3))-(parseInt(diagonal4)+parseInt(diagonal5)+parseInt(diagonal6));
+			//console.log(diagonal1+"+"+diagonal2+"+"+diagonal3+"+"+diagonal4+"+"+diagonal5+"+"+diagonal6);
+			
+			$("#delta1").append("<tr><th>Total="+Respuesta+"</th></tr>");
+			$("#resultadoD1").val(Respuesta);
+			//console.log(Respuesta);
+			//funcion de operacion-> numero1,numero2,signo operacion(2,5,s00)
 			
 			
 			
 		}
-		function delta2(){
+		function delta2(Matriz){
 		//matriz con respuestas en columna 2	
 			/*
 			1|6|3 
@@ -293,11 +446,87 @@
 			1,0|1,3|1,2
 			*/
 			
+				//fila,columna			
+			//DATOS
+			//Ecuacion1
+			var x00=Matriz[0][0];
+			var x10=Matriz[1][0];
+			var x20=Matriz[2][0];
 			
+			var y01=Matriz[0][1];
+			var y11=Matriz[1][1];
+			var y21=Matriz[2][1];
+			
+			var z02=Matriz[0][2];
+			var z12=Matriz[1][2];
+			var z22=Matriz[2][2];
+			
+			var r03=Matriz[0][3];
+			var r13=Matriz[1][3];
+			var r23=Matriz[2][3];
+			//Fin Ecuacion1
+			//DATOS
+			//console.log(x00+"|"+y11+"|"+z22);
+			/*
+			x00|r03|z02
+			x10|r13|z12
+			x20|r23|z22
+			x00|r03|z02
+			x10|r13|z12
+			*/	
+			$("#delta2").html("");
+			$("#delta2").append("<tr><th>D2</th></tr>");
+			$("#delta2").append("<tr><th>Primeras diagonales</th></tr>");
+			
+			$("#delta2").append("<tr>");
+			//x00*y11*z22
+			
+			var diagonal1=operacion(x00,r13,z22);	
+			$("#delta2").append("<td>"+x00+"|"+r13+"|"+z22+"|="+diagonal1+"</td>");
+			$("#delta2").append("</tr>");
+			$("#delta2").append("<tr>");
+			//x00*y11*z02
+			
+			var diagonal2=operacion(x10,r23,z02);
+			$("#delta2").append("<td>"+x10+"|"+r23+"|"+z02+"|="+diagonal2+"</td>");
+			$("#delta2").append("</tr>");
+			$("#delta2").append("<tr>");
+			//x00*y11*z02
+			
+			var diagonal3=operacion(x20,r03,z12);
+			$("#delta2").append("<td>"+x20+"|"+r03+"|"+z12+"|="+diagonal3+"</td>");
+			$("#delta2").append("</tr>");
+			
+			$("#delta2").append("<tr><th>Segundas diagonales</th></tr>");
+			
+			//z02*y11*x20
+			$("#delta2").append("<tr>");
+			
+			var diagonal4=operacion(z02,r13,x20);	
+			$("#delta2").append("<td>"+z02+"|"+r13+"|"+x20+"|="+diagonal4+"</td>");
+			//z12*y21*x00
+			$("#delta2").append("</tr>");
+			$("#delta2").append("<tr>");			
+			var diagonal5=operacion(z12,r23,x00);	
+			$("#delta2").append("<td>"+z12+"|"+r23+"|"+x00+"|="+diagonal5+"</td>");
+			//z22*y01*x10
+			$("#delta2").append("</tr>");
+			$("#delta2").append("<tr>");			
+			var diagonal6=operacion(z22,r03,x10);	
+			$("#delta2").append("<td>"+z22+"|"+r03+"|"+x10+"|="+diagonal6+"</td>");
+			$("#delta2").append("</tr>");
+			
+			
+			var Respuesta=(parseInt(diagonal1)+parseInt(diagonal2)+parseInt(diagonal3))-(parseInt(diagonal4)+parseInt(diagonal5)+parseInt(diagonal6));
+			//console.log(diagonal1+"+"+diagonal2+"+"+diagonal3+"+"+diagonal4+"+"+diagonal5+"+"+diagonal6);
+			$("#delta2").append("<tr><th>Total="+Respuesta+"</th></tr>");
+			$("#resultadoD2").val(Respuesta);
+			//console.log(Respuesta);
+			//funcion de operacion-> numero1,numero2,signo operacion(2,5,s00)
 			
 			
 		}
-		function delta3(){
+		function delta3(Matriz){
 		//matriz con respuestas en columna 3
 			/*
 			1|2|6=6 
@@ -310,12 +539,95 @@
 			0,0|0,1|0,3
 			1,0|1,1|1,3
 			*/
+			//fila,columna			
+			//DATOS
+			//Ecuacion1
+			var x00=Matriz[0][0];
+			var x10=Matriz[1][0];
+			var x20=Matriz[2][0];
+			
+			var y01=Matriz[0][1];
+			var y11=Matriz[1][1];
+			var y21=Matriz[2][1];
+			
+			var z02=Matriz[0][2];
+			var z12=Matriz[1][2];
+			var z22=Matriz[2][2];
+			
+			var r03=Matriz[0][3];
+			var r13=Matriz[1][3];
+			var r23=Matriz[2][3];
+			//Fin Ecuacion1
+			//DATOS
+			//console.log(x00+"|"+y11+"|"+z22);
+			/*
+			x00|y01|r03
+			x10|y11|r13
+			x20|y21|r23
+			x00|y01|r03
+			x10|y11|r13
+			*/	
+			$("#delta3").html("");
+			$("#delta3").append("<tr><th>D3</th></tr>");
+			$("#delta3").append("<tr><th>Primeras diagonales</th></tr>");
+			
+			$("#delta3").append("<tr>");
+			//x00*y11*z22
+			
+			var diagonal1=operacion(x00,y11,r23);	
+			$("#delta3").append("<td>"+x00+"|"+y11+"|"+r23+"|="+diagonal1+"</td>");
+			$("#delta3").append("</tr>");
+			$("#delta3").append("<tr>");
+			//x00*y11*z02
+			
+			var diagonal2=operacion(x10,y21,r03);
+			$("#delta3").append("<td>"+x10+"|"+y21+"|"+r03+"|="+diagonal2+"</td>");
+			$("#delta3").append("</tr>");
+			$("#delta3").append("<tr>");
+			//x00*y11*z02
+			
+			var diagonal3=operacion(x20,y01,r13);
+			$("#delta3").append("<td>"+x20+"|"+y01+"|"+r13+"|="+diagonal3+"</td>");
+			$("#delta3").append("</tr>");
+			
+			$("#delta3").append("<tr><th>Segundas diagonales</th></tr>");
+			
+			//z02*y11*x20
+			$("#delta3").append("<tr>");
+			
+			var diagonal4=operacion(r03,y11,x20);	
+			$("#delta3").append("<td>"+r03+"|"+y11+"|"+x20+"|="+diagonal4+"</td>");
+			//z12*y21*x00
+			$("#delta3").append("</tr>");
+			$("#delta3").append("<tr>");			
+			var diagonal5=operacion(r13,y21,x00);	
+			$("#delta3").append("<td>"+r13+"|"+y21+"|"+x00+"|="+diagonal5+"</td>");
+			//z22*y01*x10
+			$("#delta3").append("</tr>");
+			$("#delta3").append("<tr>");			
+			var diagonal6=operacion(r23,y01,x10);	
+			$("#delta3").append("<td>"+r23+"|"+y01+"|"+x10+"|="+diagonal6+"</td>");
+			$("#delta3").append("</tr>");
 			
 			
-			
-			
+			var Respuesta=(parseInt(diagonal1)+parseInt(diagonal2)+parseInt(diagonal3))-(parseInt(diagonal4)+parseInt(diagonal5)+parseInt(diagonal6));
+			//console.log(diagonal1+"+"+diagonal2+"+"+diagonal3+"+"+diagonal4+"+"+diagonal5+"+"+diagonal6);
+			$("#delta3").append("<tr><th>Total="+Respuesta+"</th></tr>");
+			$("#resultadoD3").val(Respuesta);
+			//console.log(Respuesta);
+			//funcion de operacion-> numero1,numero2,signo operacion(2,5,s00)
 			
 		}
+					
+		function operacion(dato1,dato2,dato3){
+			var respuesta="";
+					
+			respuesta	=(parseInt(dato1))*(parseInt(dato2))*(parseInt(dato3));
+					
+			return respuesta;
+		}			
+					
+					
   </script>
 			
     </head>
@@ -327,32 +639,32 @@
             </tr>
             <tr>
                 <td>
-					<select class="form-control"  onchange="cambia();"name="vsigno11" id="vsigno11">
+					<!--<select class="form-control"  onchange="cambia();"name="vsigno11" id="vsigno11">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 				</td>
 				<td><span>x</span><input type="text" class="form-control" name="v11" id="v11" onkeyup="cambia();"></td>
 				<td>
-					<select class="form-control"  onchange="cambia();"name="vsigno12" id="vsigno12">
+					<!--<select class="form-control"  onchange="cambia();"name="vsigno12" id="vsigno12">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 				</td>
                 <td><span>y</span><input type="text" class="form-control" name="v12" id="v12" onkeyup="cambia();"></td>
 				<td>
-					<select class="form-control"  onchange="cambia();"name="vsigno13" id="vsigno13">
+					<!--<select class="form-control"  onchange="cambia();"name="vsigno13" id="vsigno13">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 				</td>
                 <td><span>z</span><input type="text" class="form-control" name="v13" id="v13" onkeyup="cambia();"></td>				
                 <td>
 					<span>=</span>
-					<select class="form-control"  onchange="cambia();"name="vsigno14" id="vsigno14">
+				<!--<select class="form-control"  onchange="cambia();"name="vsigno14" id="vsigno14">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 					<input type="text" class="form-control" name="v14" id="v14" onkeyup="cambia();"></td>
             </tr>
 			
@@ -360,33 +672,33 @@
 			
 			 <tr>
                 <td>
-					<select class="form-control"  onchange="cambia();"name="vsigno21" id="vsigno21">
+				<!--	<select class="form-control"  onchange="cambia();"name="vsigno21" id="vsigno21">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 				</td>
 				<td><span>x</span><input type="text" class="form-control" name="v21" id="v21" onkeyup="cambia();"></td>
 				<td>
-					<select class="form-control"  onchange="cambia();"name="vsigno22" id="vsigno22">
+				<!--	<select class="form-control"  onchange="cambia();"name="vsigno22" id="vsigno22">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 				</td>
                 <td><span>y</span><input type="text" class="form-control" name="v22" id="v22" onkeyup="cambia();"></td>
 				<td>
-					<select class="form-control"  onchange="cambia();"name="vsigno23" id="vsigno23">
+				<!--	<select class="form-control"  onchange="cambia();"name="vsigno23" id="vsigno23">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 				</td>
                 <td><span>z</span><input type="text" class="form-control" name="v23" id="v23" onkeyup="cambia();"></td>
 				
                 <td>
 					<span>=</span>
-					<select class="form-control"  onchange="cambia();"name="vsigno24" id="vsigno24">
+				<!--	<select class="form-control"  onchange="cambia();"name="vsigno24" id="vsigno24">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 					<input type="text" class="form-control" name="v24" id="v24" onkeyup="cambia();"></td>
             </tr>
 			
@@ -397,32 +709,32 @@
 			
 			 <tr>
                 <td>
-					<select class="form-control"  onchange="cambia();"name="vsigno31" id="vsigno31">
+					<!--<select class="form-control"  onchange="cambia();"name="vsigno31" id="vsigno31">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 				</td>
 				<td><span>x</span><input type="text" class="form-control" name="v31" id="v31" onkeyup="cambia();"></td>
 				<td>
-					<select class="form-control"  onchange="cambia();"name="vsigno32" id="vsigno32">
+				<!--	<select class="form-control"  onchange="cambia();"name="vsigno32" id="vsigno32">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 				</td>
                 <td><span>y</span><input type="text" class="form-control" name="v32" id="v32" onkeyup="cambia();"></td>
 				<td>
-					<select class="form-control"  onchange="cambia();"name="vsigno33" id="vsigno33">
+					<!--<select class="form-control"  onchange="cambia();"name="vsigno33" id="vsigno33">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 				</td>
                 <td><span>z</span><input type="text" class="form-control" name="v33" id="v33" onkeyup="cambia();"></td>
 				<td>
 					<span>=</span>
-					<select class="form-control"  onchange="cambia();"name="vsigno34" id="vsigno34">
+				<!--	<select class="form-control"  onchange="cambia();"name="vsigno34" id="vsigno34">
 						<option value="+">+</option>
 						<option value="-">-</option>
-					</select>
+					</select>-->
 					<input type="text" class="form-control" name="v34" id="v34" onkeyup="cambia();"></td>
             </tr>
             <tr>
@@ -441,14 +753,37 @@
             <div class="col-md-4" id="ecuacion3">D2</div>
         </div>
 			
-			<table id="respuesta" class="table table-striped" style="width:50%;margin:auto;"></table>
+			
+		
 			
          <div class="row">
-            <div class="col-md-2" id="delta">D</div>
-            <div class="col-md-2" id="delta1">D1</div>
-            <div class="col-md-2" id="delta2">D2</div>
-            <div class="col-md-2" id="delta3">D3</div>
+           <div class="col-md-2">
+					 	<table class="table table-striped" id="delta"></table>
+					 </div>
+            <div class="col-md-2">
+					 		<table class="table table-striped" id="delta1"></table>
+					 	</div>
+					 <div class="col-md-2">
+					 		<table class="table table-striped" id="delta2"></table>
+					 	</div>
+					 <div class="col-md-2">
+					 		<table class="table table-striped" id="delta3"></table>
+					 	</div>
         </div>
+			 
+			
+			<div class="row">
+				 <input type="hidden" id="resultadoD">
+				 <input type="hidden" id="resultadoD1">
+				 <input type="hidden" id="resultadoD2">
+				 <input type="hidden" id="resultadoD3">
+           
+            <div class="col-md-4" id="Deltax">D1</div>
+            <div class="col-md-4" id="Deltay">D2</div>
+				 		<div class="col-md-4" id="Deltaz">D3</div>
+        </div>
+				<table id="respuesta" class="table table-striped" style="width:50%;margin:auto;"></table>
+			
         
     </body>
 </html>
